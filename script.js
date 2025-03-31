@@ -40,7 +40,7 @@ const teamMembers = [
 // creo la funzione che mi permette di creare le singole card
 
 const cardCreator = (member) => {
-  const card = `<div class="col-4 mb-4">
+  const card = `<div class="col-lg-4 col-md-6 col-xs-12 mb-4">
     <div class="card-container d-flex align-items-center bg-dark">
       <div class="img-team">
         <img src="${member.img}" alt="male1" class="img-fluid">
