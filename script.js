@@ -36,3 +36,21 @@ const teamMembers = [
     img: "img/female3.png"
   }
 ];
+
+// creo la funzione che mi permette di creare le card
+
+const cardCreator = (member) => {
+  `< div class="col-4 d-flex" >
+    <div class="card-container d-flex align-items-center bg-dark">
+      <div class="img-team">
+        <img src="./img/male1.png" alt="male1" class="img-fluid">
+      </div>
+      <div class="text-team text-white">
+        <h4>MARCO BIANCHI</h4>
+        <h6>Designer</h6>
+        <h6>marcobianchi@team.com</h6>
+      </div>
+    </div>
+  </div >`
+
+}
