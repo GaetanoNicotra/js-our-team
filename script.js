@@ -37,20 +37,26 @@ const teamMembers = [
   }
 ];
 
-// creo la funzione che mi permette di creare le card
+// creo la funzione che mi permette di creare le singole card
 
 const cardCreator = (member) => {
-  `< div class="col-4 d-flex" >
+  const card = `< div class="col-4" >
     <div class="card-container d-flex align-items-center bg-dark">
       <div class="img-team">
-        <img src="./img/male1.png" alt="male1" class="img-fluid">
+        <img src="${member.img}" alt="male1" class="img-fluid">
       </div>
       <div class="text-team text-white">
-        <h4>MARCO BIANCHI</h4>
-        <h6>Designer</h6>
-        <h6>marcobianchi@team.com</h6>
+        <h4>${member.name}</h4>
+        <h6>${member.role}</h6>
+        <h6>${member.email}</h6>
       </div>
     </div>
   </div >`
-
+  document.getElementById('team-members').innerHTML += card
 }
+// creo un ciclo che inserisce le informazioni di ciascun membro
+// all'interno della sua crad
+for (let i = 0; i < teamMembers.length; i++) {
+  cardCreator(teamMembers[i])
+}
+
